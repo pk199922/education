@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" 
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background: url(../devlopment/images/main.jpg);
+        }
+        .login{
+            background: whitesmoke;
+            border:solid 5px darkcyan;
+            width: 500px;
+            height: 500px;
+            margin-left: 400px;
+            margin-top: 60px;
+            color: darkcyan;
+            margin-bottom: 50px;
+        }
+        .row .col{
+            column-count: 2;
+            float: right;
+            columns: 500px;
+        
+        }
+        button{
+            margin-left: 200px;
+            margin-top: 10px;
+            width: 100px;
+            border-radius: 50px;
+        }
+        hr{
+            background: darkcyan;
+            height: 1px;
+            width: 400px;
+            margin: 20px 40px;
+
+        }
+        h4{
+            margin-top: 20px;
+        }
+        .back{
+           margin: 10px;
+           font-family: 'Lobster', cursive;
+        }
+        .back a{
+            text-decoration: none;
+            color: black;
+            text-shadow: 2px 2px 7px darkcyan;
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="back">
+        <a href="index.html">
+            <i class="fas fa-arrow-left "></i> Back to <small>Home</small>
+        </a>
+    </div> 
+    <div class="login">
+        <h4><center>--LogIn--</center></h4>
+        <form method="POST" action="C:\xampp\htdocs\login.php" class="needs-validation" novalidate>
+            <div class="form-group p-3">
+            <label for="uname">Username:</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group p-3">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group form-check m-3">
+            <label class="form-check-label row">
+                <input class="form-check-input mx-0" type="checkbox" name="remember" required>
+                <div class="col"><p>remember me</p></div>
+                <div class="col"><a href="">forget password</a></div>              
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Check this checkbox to continue.</div>
+            </label>
+            </div>
+            <button type="submit" class="btn btn-outline-info">LogIn</button>
+            <hr>
+            <a href="reg.html"><center>Register</center></a>
+        </form>
+    </div>
+    
+    
+    
+    <script>
+    // Disable form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+    
+</body>
+</html>
